@@ -96,6 +96,12 @@ return [
         'row_text_color_help' => 'Màu chữ cho các hàng của bảng',
         'border_color' => 'Màu viền',
         'border_color_help' => 'Màu cho viền của bảng',
+        'table_styles' => 'Kiểu bảng',
+        'table_styles_help' => 'Chọn các lớp bảng Bootstrap áp dụng cho bảng hướng dẫn kích thước.',
+        'table_style_bordered' => 'Có viền (table-bordered)',
+        'table_style_striped' => 'Các hàng xen kẽ (table-striped)',
+        'table_style_hover' => 'Hiệu ứng khi rê chuột (table-hover)',
+        'table_style_small' => 'Bảng gọn nhẹ (table-sm)',
         'font_size' => 'Cỡ chữ (px)',
         'font_size_help' => 'Cỡ chữ của văn bản trong bảng tính bằng pixel',
         'border_radius' => 'Bán kính bo góc (px)',
@@ -124,4 +130,3 @@ return [
         'settings_saved' => 'Lưu cài đặt thành công',
     ],
 ];
-

@@ -96,6 +96,12 @@ return [
         'row_text_color_help' => 'Χρώμα κειμένου για τις γραμμές του πίνακα',
         'border_color' => 'Χρώμα περιγράμματος',
         'border_color_help' => 'Χρώμα για τα περιγράμματα του πίνακα',
+        'table_styles' => 'Στυλ πίνακα',
+        'table_styles_help' => 'Επιλέξτε κλάσεις Bootstrap για τη διαμόρφωση του πίνακα του οδηγού μεγεθών.',
+        'table_style_bordered' => 'Με περίγραμμα (table-bordered)',
+        'table_style_striped' => 'Ριγέ σειρές (table-striped)',
+        'table_style_hover' => 'Εφέ κατά το πέρασμα (table-hover)',
+        'table_style_small' => 'Συμπαγής πίνακας (table-sm)',
         'font_size' => 'Μέγεθος γραμματοσειράς (px)',
         'font_size_help' => 'Μέγεθος γραμματοσειράς του κειμένου του πίνακα σε pixel',
         'border_radius' => 'Καμπυλότητα γωνιών (px)',
@@ -124,4 +130,3 @@ return [
         'settings_saved' => 'Οι ρυθμίσεις αποθηκεύτηκαν επιτυχώς',
     ],
 ];
-

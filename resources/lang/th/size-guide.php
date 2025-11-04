@@ -96,6 +96,12 @@ return [
         'row_text_color_help' => 'สีข้อความสำหรับแถวในตาราง',
         'border_color' => 'สีเส้นขอบ',
         'border_color_help' => 'สีของเส้นขอบตาราง',
+        'table_styles' => 'สไตล์ของตาราง',
+        'table_styles_help' => 'เลือกคลาสตารางของ Bootstrap ที่ต้องการใช้กับคู่มือขนาด',
+        'table_style_bordered' => 'มีเส้นขอบ (table-bordered)',
+        'table_style_striped' => 'แถวสลับสี (table-striped)',
+        'table_style_hover' => 'เอฟเฟ็กต์เมื่อชี้ (table-hover)',
+        'table_style_small' => 'ตารางแบบกระทัดรัด (table-sm)',
         'font_size' => 'ขนาดตัวอักษร (px)',
         'font_size_help' => 'ขนาดตัวอักษรของข้อความในตารางเป็นพิกเซล',
         'border_radius' => 'รัศมีมุม (px)',
@@ -124,4 +130,3 @@ return [
         'settings_saved' => 'บันทึกการตั้งค่าเรียบร้อยแล้ว',
     ],
 ];
-

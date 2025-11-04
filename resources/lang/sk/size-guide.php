@@ -96,6 +96,12 @@ return [
         'row_text_color_help' => 'Farba textu riadkov tabuľky',
         'border_color' => 'Farba rámu',
         'border_color_help' => 'Farba rámov tabuľky',
+        'table_styles' => 'Štýly tabuľky',
+        'table_styles_help' => 'Vyberte triedy Bootstrap, ktoré sa majú použiť na tabuľku sprievodcu veľkosťami.',
+        'table_style_bordered' => 'S rámčekom (table-bordered)',
+        'table_style_striped' => 'Pruhované riadky (table-striped)',
+        'table_style_hover' => 'Efekt pri nabehnutí (table-hover)',
+        'table_style_small' => 'Kompaktná tabuľka (table-sm)',
         'font_size' => 'Veľkosť písma (px)',
         'font_size_help' => 'Veľkosť písma textu v tabuľke v pixeloch',
         'border_radius' => 'Polomer zaoblenia (px)',
@@ -124,4 +130,3 @@ return [
         'settings_saved' => 'Nastavenia boli úspešne uložené',
     ],
 ];
-

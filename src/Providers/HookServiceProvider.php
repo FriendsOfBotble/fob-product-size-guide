@@ -15,7 +15,6 @@ class HookServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
-        add_filter(BASE_FILTER_AFTER_SETTING_CONTENT, [$this, 'addSettings'], 49);
 
         add_action(BASE_ACTION_META_BOXES, function ($context, $object): void {
             if (get_class($object) === Product::class && $context === 'advanced') {

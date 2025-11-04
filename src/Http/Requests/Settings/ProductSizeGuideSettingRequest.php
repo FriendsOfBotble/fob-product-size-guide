@@ -3,6 +3,7 @@
 namespace FriendsOfBotble\ProductSizeGuide\Http\Requests\Settings;
 
 use Botble\Support\Http\Requests\Request;
+use Illuminate\Validation\Rule;
 
 class ProductSizeGuideSettingRequest extends Request
 {
@@ -16,13 +17,15 @@ class ProductSizeGuideSettingRequest extends Request
             'product_size_guide_inline_expanded' => ['nullable', 'boolean'],
             'product_size_guide_show_image' => ['nullable', 'boolean'],
 
-            'product_size_guide_link_color' => ['nullable', 'string', 'regex:/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/'],
-            'product_size_guide_header_bg_color' => ['nullable', 'string', 'regex:/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/'],
-            'product_size_guide_header_text_color' => ['nullable', 'string', 'regex:/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/'],
-            'product_size_guide_row_bg_color' => ['nullable', 'string', 'regex:/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/'],
-            'product_size_guide_row_alt_bg_color' => ['nullable', 'string', 'regex:/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/'],
-            'product_size_guide_row_text_color' => ['nullable', 'string', 'regex:/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/'],
-            'product_size_guide_border_color' => ['nullable', 'string', 'regex:/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/'],
+            'product_size_guide_link_color' => ['nullable', 'string', 'regex:/^\\s*(#(?:[A-Fa-f0-9]{3,8})|(?:rgba?|hsla?)\\([^)]+\\)|transparent)\\s*$/i'],
+            'product_size_guide_header_bg_color' => ['nullable', 'string', 'regex:/^\\s*(#(?:[A-Fa-f0-9]{3,8})|(?:rgba?|hsla?)\\([^)]+\\)|transparent)\\s*$/i'],
+            'product_size_guide_header_text_color' => ['nullable', 'string', 'regex:/^\\s*(#(?:[A-Fa-f0-9]{3,8})|(?:rgba?|hsla?)\\([^)]+\\)|transparent)\\s*$/i'],
+            'product_size_guide_row_bg_color' => ['nullable', 'string', 'regex:/^\\s*(#(?:[A-Fa-f0-9]{3,8})|(?:rgba?|hsla?)\\([^)]+\\)|transparent)\\s*$/i'],
+            'product_size_guide_row_alt_bg_color' => ['nullable', 'string', 'regex:/^\\s*(#(?:[A-Fa-f0-9]{3,8})|(?:rgba?|hsla?)\\([^)]+\\)|transparent)\\s*$/i'],
+            'product_size_guide_row_text_color' => ['nullable', 'string', 'regex:/^\\s*(#(?:[A-Fa-f0-9]{3,8})|(?:rgba?|hsla?)\\([^)]+\\)|transparent)\\s*$/i'],
+            'product_size_guide_border_color' => ['nullable', 'string', 'regex:/^\\s*(#(?:[A-Fa-f0-9]{3,8})|(?:rgba?|hsla?)\\([^)]+\\)|transparent)\\s*$/i'],
+            'product_size_guide_table_styles' => ['nullable', 'array'],
+            'product_size_guide_table_styles.*' => ['string', Rule::in(['table-bordered', 'table-striped', 'table-hover', 'table-sm'])],
 
             'product_size_guide_font_size' => ['nullable', 'integer', 'min:10', 'max:24'],
             'product_size_guide_border_radius' => ['nullable', 'integer', 'min:0', 'max:20'],

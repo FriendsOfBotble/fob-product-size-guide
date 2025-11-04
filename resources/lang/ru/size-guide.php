@@ -96,6 +96,12 @@ return [
         'row_text_color_help' => 'Цвет текста строк таблицы',
         'border_color' => 'Цвет границ',
         'border_color_help' => 'Цвет границ таблицы',
+        'table_styles' => 'Стили таблицы',
+        'table_styles_help' => 'Выберите классы таблицы Bootstrap для применения к таблице гида по размерам.',
+        'table_style_bordered' => 'С границами (table-bordered)',
+        'table_style_striped' => 'Полосатые строки (table-striped)',
+        'table_style_hover' => 'Подсветка при наведении (table-hover)',
+        'table_style_small' => 'Компактная таблица (table-sm)',
         'font_size' => 'Размер шрифта (px)',
         'font_size_help' => 'Размер шрифта текста таблицы в пикселях',
         'border_radius' => 'Радиус скругления (px)',
@@ -124,4 +130,3 @@ return [
         'settings_saved' => 'Настройки успешно сохранены',
     ],
 ];
-

@@ -96,6 +96,12 @@ return [
         'row_text_color_help' => 'Tekstfarve for tabelrækker',
         'border_color' => 'Rammefarve',
         'border_color_help' => 'Farve på tabelrammer',
+        'table_styles' => 'Tabelstile',
+        'table_styles_help' => 'Vælg de Bootstrap-klasser, der skal bruges til størrelsesguidens tabel.',
+        'table_style_bordered' => 'Med kant (table-bordered)',
+        'table_style_striped' => 'Stribede rækker (table-striped)',
+        'table_style_hover' => 'Hover-effekt (table-hover)',
+        'table_style_small' => 'Kompakt tabel (table-sm)',
         'font_size' => 'Skrifttype (px)',
         'font_size_help' => 'Skriftstørrelse for tabeltekst i pixel',
         'border_radius' => 'Hjørneradius (px)',
@@ -124,4 +130,3 @@ return [
         'settings_saved' => 'Indstillinger gemt',
     ],
 ];
-

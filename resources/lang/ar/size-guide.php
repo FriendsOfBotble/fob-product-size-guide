@@ -96,6 +96,12 @@ return [
         'row_text_color_help' => 'لون نص صفوف الجدول',
         'border_color' => 'لون الحدود',
         'border_color_help' => 'لون حدود الجدول',
+        'table_styles' => 'أنماط الجدول',
+        'table_styles_help' => 'اختر أصناف Bootstrap الجاهزة لتنسيق جدول دليل المقاسات.',
+        'table_style_bordered' => 'حدود للخلايا (table-bordered)',
+        'table_style_striped' => 'صفوف مخططة (table-striped)',
+        'table_style_hover' => 'تأثير التمرير (table-hover)',
+        'table_style_small' => 'جدول مدمج (table-sm)',
         'font_size' => 'حجم الخط (بكسل)',
         'font_size_help' => 'حجم خط نص الجدول بالبكسل',
         'border_radius' => 'نصف قطر الحافة (بكسل)',
@@ -124,4 +130,3 @@ return [
         'settings_saved' => 'تم حفظ الإعدادات بنجاح',
     ],
 ];
-

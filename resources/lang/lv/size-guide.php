@@ -96,6 +96,12 @@ return [
         'row_text_color_help' => 'Tabulas rindu teksta krāsa',
         'border_color' => 'Rāmja krāsa',
         'border_color_help' => 'Tabulas rāmju krāsa',
+        'table_styles' => 'Tabulas stili',
+        'table_styles_help' => 'Izvēlieties Bootstrap tabulas klases, ko piemērot izmēru ceļveža tabulai.',
+        'table_style_bordered' => 'Ar kontūrām (table-bordered)',
+        'table_style_striped' => 'Svītrainas rindas (table-striped)',
+        'table_style_hover' => 'Efekts pie kursoru pārvietošanas (table-hover)',
+        'table_style_small' => 'Kompakta tabula (table-sm)',
         'font_size' => 'Fonta lielums (px)',
         'font_size_help' => 'Tabulas teksta fonta lielums pikseļos',
         'border_radius' => 'Stūru noapaļojums (px)',
@@ -124,4 +130,3 @@ return [
         'settings_saved' => 'Iestatījumi veiksmīgi saglabāti',
     ],
 ];
-

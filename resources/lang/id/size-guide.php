@@ -96,6 +96,12 @@ return [
         'row_text_color_help' => 'Warna teks untuk baris tabel',
         'border_color' => 'Warna batas',
         'border_color_help' => 'Warna untuk batas tabel',
+        'table_styles' => 'Gaya tabel',
+        'table_styles_help' => 'Pilih kelas tabel Bootstrap yang akan diterapkan pada panduan ukuran.',
+        'table_style_bordered' => 'Dengan garis tepi (table-bordered)',
+        'table_style_striped' => 'Baris bergaris (table-striped)',
+        'table_style_hover' => 'Efek hover (table-hover)',
+        'table_style_small' => 'Tabel ringkas (table-sm)',
         'font_size' => 'Ukuran font (px)',
         'font_size_help' => 'Ukuran font teks tabel dalam piksel',
         'border_radius' => 'Radius sudut (px)',
@@ -124,4 +130,3 @@ return [
         'settings_saved' => 'Pengaturan berhasil disimpan',
     ],
 ];
-

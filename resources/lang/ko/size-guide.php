@@ -96,6 +96,12 @@ return [
         'row_text_color_help' => '테이블 행의 텍스트 색상',
         'border_color' => '테두리 색상',
         'border_color_help' => '테이블 테두리 색상',
+        'table_styles' => '테이블 스타일',
+        'table_styles_help' => '사이즈 가이드 테이블에 적용할 Bootstrap 테이블 클래스를 선택하세요.',
+        'table_style_bordered' => '테두리 표시 (table-bordered)',
+        'table_style_striped' => '줄무늬 행 (table-striped)',
+        'table_style_hover' => '호버 효과 (table-hover)',
+        'table_style_small' => '컴팩트 테이블 (table-sm)',
         'font_size' => '글꼴 크기 (px)',
         'font_size_help' => '테이블 텍스트의 글꼴 크기 (픽셀)',
         'border_radius' => '모서리 반경 (px)',
@@ -124,4 +130,3 @@ return [
         'settings_saved' => '설정이 성공적으로 저장되었습니다',
     ],
 ];
-

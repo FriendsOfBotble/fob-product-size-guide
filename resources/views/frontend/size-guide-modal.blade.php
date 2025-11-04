@@ -12,6 +12,11 @@
         $borderColor = setting('product_size_guide_border_color', '#dee2e6');
         $fontSize = setting('product_size_guide_font_size', 14);
         $borderRadius = setting('product_size_guide_border_radius', 4);
+        $tableStyles = json_decode(setting('product_size_guide_table_styles', '["table-bordered"]'), true);
+        if (! is_array($tableStyles) || empty($tableStyles)) {
+            $tableStyles = ['table-bordered'];
+        }
+        $tableCssClasses = trim('table ' . implode(' ', array_unique(array_filter($tableStyles))));
     @endphp
 
     <!-- Modal -->
@@ -38,7 +43,7 @@
                                 ->pluck('name', 'slug');
                         @endphp
                         <div class="table-responsive">
-                            <table class="table table-bordered" style="border-color: {{ $borderColor }}; border-radius: {{ $borderRadius }}px; overflow: hidden; font-size: {{ $fontSize }}px;">
+                            <table class="{{ $tableCssClasses }}" style="border-color: {{ $borderColor }}; border-radius: {{ $borderRadius }}px; overflow: hidden; font-size: {{ $fontSize }}px;">
                                 <thead>
                                     <tr style="background-color: {{ $headerBgColor }}; color: {{ $headerTextColor }};">
                                         @foreach($sizeGuide->table_headers as $header)

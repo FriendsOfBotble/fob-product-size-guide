@@ -96,6 +96,12 @@ return [
         'row_text_color_help' => 'A táblázat sorainak szövegszíne',
         'border_color' => 'Szegély színe',
         'border_color_help' => 'A táblázat szegélyeinek színe',
+        'table_styles' => 'Táblázat stílusai',
+        'table_styles_help' => 'Válassza ki, mely Bootstrap táblázatosztályok legyenek alkalmazva a méretútmutató táblázatára.',
+        'table_style_bordered' => 'Keretes (table-bordered)',
+        'table_style_striped' => 'Csíkozott sorok (table-striped)',
+        'table_style_hover' => 'Kiemelés egér fölé húzáskor (table-hover)',
+        'table_style_small' => 'Kompakt táblázat (table-sm)',
         'font_size' => 'Betűméret (px)',
         'font_size_help' => 'A táblázat szövegének betűmérete pixelben',
         'border_radius' => 'Szegély lekerekítése (px)',
@@ -124,4 +130,3 @@ return [
         'settings_saved' => 'A beállítások sikeresen elmentve',
     ],
 ];
-

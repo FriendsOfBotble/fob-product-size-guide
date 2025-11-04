@@ -105,6 +105,44 @@
         :helper-text="trans('plugins/fob-product-size-guide::size-guide.settings.border_color_help')"
     />
 
+    @php
+        $tableStyles = json_decode(setting('product_size_guide_table_styles', '["table-bordered"]'), true) ?: ['table-bordered'];
+        $availableTableStyles = [
+            'table-bordered' => trans('plugins/fob-product-size-guide::size-guide.settings.table_style_bordered'),
+            'table-striped' => trans('plugins/fob-product-size-guide::size-guide.settings.table_style_striped'),
+            'table-hover' => trans('plugins/fob-product-size-guide::size-guide.settings.table_style_hover'),
+            'table-sm' => trans('plugins/fob-product-size-guide::size-guide.settings.table_style_small'),
+        ];
+    @endphp
+
+    <x-core-setting::form-group>
+        <label class="form-label">
+            {{ trans('plugins/fob-product-size-guide::size-guide.settings.table_styles') }}
+        </label>
+
+        <div class="row gy-2">
+            @foreach($availableTableStyles as $class => $label)
+                <div class="col-md-3 col-sm-6">
+                    <div class="form-check">
+                        <input
+                            class="form-check-input"
+                            type="checkbox"
+                            name="product_size_guide_table_styles[]"
+                            id="product_size_guide_table_style_{{ $class }}"
+                            value="{{ $class }}"
+                            @checked(in_array($class, $tableStyles, true))
+                        >
+                        <label class="form-check-label" for="product_size_guide_table_style_{{ $class }}">
+                            {{ $label }}
+                        </label>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+
+        {{ Form::helper(trans('plugins/fob-product-size-guide::size-guide.settings.table_styles_help')) }}
+    </x-core-setting::form-group>
+
     <x-core-setting::text-input
         name="product_size_guide_font_size"
         :label="trans('plugins/fob-product-size-guide::size-guide.settings.font_size')"

@@ -96,6 +96,12 @@ return [
         'row_text_color_help' => '表格行的文字颜色',
         'border_color' => '边框颜色',
         'border_color_help' => '表格边框的颜色',
+        'table_styles' => '表格样式',
+        'table_styles_help' => '选择要应用到尺码指南表格的 Bootstrap 表格类。',
+        'table_style_bordered' => '带边框 (table-bordered)',
+        'table_style_striped' => '条纹行 (table-striped)',
+        'table_style_hover' => '悬停效果 (table-hover)',
+        'table_style_small' => '紧凑表格 (table-sm)',
         'font_size' => '字体大小 (px)',
         'font_size_help' => '表格文字的像素大小',
         'border_radius' => '圆角 (px)',
@@ -124,4 +130,3 @@ return [
         'settings_saved' => '设置保存成功',
     ],
 ];
-

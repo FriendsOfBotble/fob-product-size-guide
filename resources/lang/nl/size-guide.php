@@ -96,6 +96,12 @@ return [
         'row_text_color_help' => 'Tekstkleur voor tabelrijen',
         'border_color' => 'Randkleur',
         'border_color_help' => 'Kleur van de tabelranden',
+        'table_styles' => 'Tabelstijlen',
+        'table_styles_help' => 'Selecteer de Bootstrap-tabelklassen die op de maattabel moeten worden toegepast.',
+        'table_style_bordered' => 'Met randen (table-bordered)',
+        'table_style_striped' => 'Gestreepte rijen (table-striped)',
+        'table_style_hover' => 'Hover-effect (table-hover)',
+        'table_style_small' => 'Compacte tabel (table-sm)',
         'font_size' => 'Lettergrootte (px)',
         'font_size_help' => 'Lettergrootte van de tabeltekst in pixels',
         'border_radius' => 'Hoekradius (px)',
@@ -124,4 +130,3 @@ return [
         'settings_saved' => 'Instellingen succesvol opgeslagen',
     ],
 ];
-

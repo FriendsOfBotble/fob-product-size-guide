@@ -96,6 +96,12 @@ return [
         'row_text_color_help' => 'Couleur du texte pour les lignes du tableau',
         'border_color' => 'Couleur de la bordure',
         'border_color_help' => 'Couleur des bordures du tableau',
+        'table_styles' => 'Styles de tableau',
+        'table_styles_help' => 'Choisissez les classes de tableau Bootstrap à appliquer au guide des tailles.',
+        'table_style_bordered' => 'Avec bordures (table-bordered)',
+        'table_style_striped' => 'Lignes alternées (table-striped)',
+        'table_style_hover' => 'Effet au survol (table-hover)',
+        'table_style_small' => 'Table compacte (table-sm)',
         'font_size' => 'Taille de la police (px)',
         'font_size_help' => 'Taille de police du texte du tableau en pixels',
         'border_radius' => 'Rayon de bordure (px)',
@@ -124,4 +130,3 @@ return [
         'settings_saved' => 'Paramètres enregistrés avec succès',
     ],
 ];
-

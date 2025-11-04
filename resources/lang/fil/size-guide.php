@@ -96,6 +96,12 @@ return [
         'row_text_color_help' => 'Kulay ng teksto para sa mga hanay ng talahanayan',
         'border_color' => 'Kulay ng Gilid',
         'border_color_help' => 'Kulay para sa mga gilid ng talahanayan',
+        'table_styles' => 'Mga estilo ng talahanayan',
+        'table_styles_help' => 'Piliin ang mga Bootstrap table class na gagamitin sa talahanayan ng size guide.',
+        'table_style_bordered' => 'May border (table-bordered)',
+        'table_style_striped' => 'May guhit na mga hilera (table-striped)',
+        'table_style_hover' => 'Hover effect (table-hover)',
+        'table_style_small' => 'Compact na talahanayan (table-sm)',
         'font_size' => 'Laki ng Font (px)',
         'font_size_help' => 'Laki ng font ng teksto sa talahanayan sa pixels',
         'border_radius' => 'Border Radius (px)',
@@ -124,4 +130,3 @@ return [
         'settings_saved' => 'Matagumpay na na-save ang mga setting',
     ],
 ];
-

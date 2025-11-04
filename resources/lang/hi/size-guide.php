@@ -96,6 +96,12 @@ return [
         'row_text_color_help' => 'तालिका पंक्तियों का टेक्स्ट रंग',
         'border_color' => 'बॉर्डर का रंग',
         'border_color_help' => 'तालिका की बॉर्डर का रंग',
+        'table_styles' => 'तालिका शैलियाँ',
+        'table_styles_help' => 'साइज गाइड तालिका पर लागू करने के लिए Bootstrap तालिका क्लास चुनें।',
+        'table_style_bordered' => 'बॉर्डर वाली (table-bordered)',
+        'table_style_striped' => 'धारीदार पंक्तियाँ (table-striped)',
+        'table_style_hover' => 'होवर प्रभाव (table-hover)',
+        'table_style_small' => 'संक्षिप्त तालिका (table-sm)',
         'font_size' => 'फ़ॉन्ट आकार (px)',
         'font_size_help' => 'तालिका टेक्स्ट का फ़ॉन्ट आकार पिक्सेल में',
         'border_radius' => 'बॉर्डर रेडियस (px)',
@@ -124,4 +130,3 @@ return [
         'settings_saved' => 'सेटिंग्स सफलतापूर्वक सहेजी गईं',
     ],
 ];
-

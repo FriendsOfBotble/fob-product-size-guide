@@ -96,6 +96,12 @@ return [
         'row_text_color_help' => 'Tabeli ridade tekstivärv',
         'border_color' => 'Äärise värv',
         'border_color_help' => 'Tabeli ääriste värv',
+        'table_styles' => 'Tabeli stiilid',
+        'table_styles_help' => 'Vali Bootstrapi tabeliklassid suurusjuhendi tabelile.',
+        'table_style_bordered' => 'Äärisega (table-bordered)',
+        'table_style_striped' => 'Triibulised read (table-striped)',
+        'table_style_hover' => 'Hover-efekt (table-hover)',
+        'table_style_small' => 'Kompaktne tabel (table-sm)',
         'font_size' => 'Fondi suurus (px)',
         'font_size_help' => 'Tabeli teksti fondi suurus pikslites',
         'border_radius' => 'Nurga raadius (px)',
@@ -124,4 +130,3 @@ return [
         'settings_saved' => 'Seaded on edukalt salvestatud',
     ],
 ];
-

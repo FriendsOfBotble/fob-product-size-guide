@@ -96,6 +96,12 @@ return [
         'row_text_color_help' => 'Culoarea textului pentru rândurile tabelului',
         'border_color' => 'Culoare contur',
         'border_color_help' => 'Culoarea contururilor tabelului',
+        'table_styles' => 'Stiluri ale tabelului',
+        'table_styles_help' => 'Alegeți clasele de tabel Bootstrap care se aplică ghidului de mărimi.',
+        'table_style_bordered' => 'Cu chenar (table-bordered)',
+        'table_style_striped' => 'Rânduri alternante (table-striped)',
+        'table_style_hover' => 'Efect la trecerea cursorului (table-hover)',
+        'table_style_small' => 'Tabel compact (table-sm)',
         'font_size' => 'Mărime font (px)',
         'font_size_help' => 'Mărimea fontului textului din tabel în pixeli',
         'border_radius' => 'Rază colț (px)',
@@ -124,4 +130,3 @@ return [
         'settings_saved' => 'Setările au fost salvate cu succes',
     ],
 ];
-

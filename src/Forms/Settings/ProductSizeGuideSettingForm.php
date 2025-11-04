@@ -4,6 +4,7 @@ namespace FriendsOfBotble\ProductSizeGuide\Forms\Settings;
 
 use Botble\Base\Forms\Fields\ColorField;
 use Botble\Base\Forms\Fields\HtmlField;
+use Botble\Base\Forms\Fields\MultiCheckListField;
 use Botble\Base\Forms\Fields\NumberField;
 use Botble\Base\Forms\Fields\OnOffField;
 use Botble\Base\Forms\Fields\SelectField;
@@ -18,6 +19,7 @@ class ProductSizeGuideSettingForm extends SettingForm
         parent::setup();
 
         $displayMode = old('product_size_guide_display_mode', setting('product_size_guide_display_mode', 'inline'));
+        $tableStyles = json_decode(setting('product_size_guide_table_styles', '["table-bordered"]'), true) ?: ['table-bordered'];
 
         $this
             ->setSectionTitle(trans('plugins/fob-product-size-guide::size-guide.settings.title'))
@@ -139,6 +141,19 @@ class ProductSizeGuideSettingForm extends SettingForm
                 'value' => setting('product_size_guide_border_color', '#dee2e6'),
                 'help_block' => [
                     'text' => trans('plugins/fob-product-size-guide::size-guide.settings.border_color_help'),
+                ],
+            ])
+            ->add('product_size_guide_table_styles[]', MultiCheckListField::class, [
+                'label' => trans('plugins/fob-product-size-guide::size-guide.settings.table_styles'),
+                'choices' => [
+                    'table-bordered' => trans('plugins/fob-product-size-guide::size-guide.settings.table_style_bordered'),
+                    'table-striped' => trans('plugins/fob-product-size-guide::size-guide.settings.table_style_striped'),
+                    'table-hover' => trans('plugins/fob-product-size-guide::size-guide.settings.table_style_hover'),
+                    'table-sm' => trans('plugins/fob-product-size-guide::size-guide.settings.table_style_small'),
+                ],
+                'value' => $tableStyles,
+                'help_block' => [
+                    'text' => trans('plugins/fob-product-size-guide::size-guide.settings.table_styles_help'),
                 ],
             ])
             ->add('product_size_guide_font_size', NumberField::class, [

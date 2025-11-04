@@ -96,6 +96,12 @@ return [
         'row_text_color_help' => 'Цвят на текста на редовете в таблицата',
         'border_color' => 'Цвят на границата',
         'border_color_help' => 'Цвят на границите на таблицата',
+        'table_styles' => 'Стилове на таблицата',
+        'table_styles_help' => 'Изберете Bootstrap класове за стилизиране на таблицата на ръководството.',
+        'table_style_bordered' => 'С рамка (table-bordered)',
+        'table_style_striped' => 'Редове на ленти (table-striped)',
+        'table_style_hover' => 'Ефект при задържане (table-hover)',
+        'table_style_small' => 'Компактна таблица (table-sm)',
         'font_size' => 'Размер на шрифта (px)',
         'font_size_help' => 'Размер на шрифта на текста в таблицата в пиксели',
         'border_radius' => 'Заобляне на ъглите (px)',
@@ -124,4 +130,3 @@ return [
         'settings_saved' => 'Настройките бяха запазени успешно',
     ],
 ];
-

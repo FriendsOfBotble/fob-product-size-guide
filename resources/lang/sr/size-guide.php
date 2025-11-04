@@ -96,6 +96,12 @@ return [
         'row_text_color_help' => 'Боја текста редова табеле',
         'border_color' => 'Боја ивице',
         'border_color_help' => 'Боја ивица табеле',
+        'table_styles' => 'Стилови табеле',
+        'table_styles_help' => 'Изаберите Bootstrap класе које ће се применити на табелу водича за величине.',
+        'table_style_bordered' => 'С оквиром (table-bordered)',
+        'table_style_striped' => 'Наизменични редови (table-striped)',
+        'table_style_hover' => 'Ефекат при преласку (table-hover)',
+        'table_style_small' => 'Компактна табела (table-sm)',
         'font_size' => 'Величина фонта (px)',
         'font_size_help' => 'Величина фонта текста у табели у пикселима',
         'border_radius' => 'Радијус заобљења (px)',
@@ -124,4 +130,3 @@ return [
         'settings_saved' => 'Подешавања су успешно сачувана',
     ],
 ];
-

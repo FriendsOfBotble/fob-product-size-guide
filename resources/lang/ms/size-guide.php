@@ -96,6 +96,12 @@ return [
         'row_text_color_help' => 'Warna teks untuk baris jadual',
         'border_color' => 'Warna sempadan',
         'border_color_help' => 'Warna untuk sempadan jadual',
+        'table_styles' => 'Gaya jadual',
+        'table_styles_help' => 'Pilih kelas jadual Bootstrap yang akan digunakan pada jadual panduan saiz.',
+        'table_style_bordered' => 'Berbatas (table-bordered)',
+        'table_style_striped' => 'Baris berjalur (table-striped)',
+        'table_style_hover' => 'Kesan hover (table-hover)',
+        'table_style_small' => 'Jadual padat (table-sm)',
         'font_size' => 'Saiz fon (px)',
         'font_size_help' => 'Saiz fon teks jadual dalam piksel',
         'border_radius' => 'Jejari sudut (px)',
@@ -124,4 +130,3 @@ return [
         'settings_saved' => 'Tetapan berjaya disimpan',
     ],
 ];
-

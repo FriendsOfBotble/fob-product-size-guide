@@ -96,6 +96,12 @@ return [
         'row_text_color_help' => 'টেবিল সারির টেক্সটের রঙ',
         'border_color' => 'বর্ডারের রঙ',
         'border_color_help' => 'টেবিল বর্ডারের রঙ',
+        'table_styles' => 'টেবিলের স্টাইলসমূহ',
+        'table_styles_help' => 'সাইজ গাইডের টেবিল সাজাতে Bootstrap টেবিল ক্লাস নির্বাচন করুন।',
+        'table_style_bordered' => 'বর্ডারসহ (table-bordered)',
+        'table_style_striped' => 'ডোরা কাটা সারি (table-striped)',
+        'table_style_hover' => 'হোভার ইফেক্ট (table-hover)',
+        'table_style_small' => 'সংক্ষিপ্ত টেবিল (table-sm)',
         'font_size' => 'ফন্ট সাইজ (px)',
         'font_size_help' => 'টেবিল টেক্সটের ফন্ট সাইজ (পিক্সেল)',
         'border_radius' => 'বর্ডার রেডিয়াস (px)',
@@ -124,4 +130,3 @@ return [
         'settings_saved' => 'সেটিংস সফলভাবে সংরক্ষণ করা হয়েছে',
     ],
 ];
-

@@ -96,6 +96,12 @@ return [
         'row_text_color_help' => 'Color del texto de las filas de la tabla',
         'border_color' => 'Color del borde',
         'border_color_help' => 'Color de los bordes de la tabla',
+        'table_styles' => 'Estilos de la tabla',
+        'table_styles_help' => 'Selecciona las clases de tabla de Bootstrap que se aplicarán a la guía de tallas.',
+        'table_style_bordered' => 'Con bordes (table-bordered)',
+        'table_style_striped' => 'Filas alternas (table-striped)',
+        'table_style_hover' => 'Efecto hover (table-hover)',
+        'table_style_small' => 'Tabla compacta (table-sm)',
         'font_size' => 'Tamaño de fuente (px)',
         'font_size_help' => 'Tamaño de fuente del texto de la tabla en píxeles',
         'border_radius' => 'Radio del borde (px)',
@@ -124,4 +130,3 @@ return [
         'settings_saved' => 'Configuración guardada correctamente',
     ],
 ];
-

@@ -96,6 +96,12 @@ return [
         'row_text_color_help' => 'テーブル行の文字色',
         'border_color' => '枠線の色',
         'border_color_help' => 'テーブル枠線の色',
+        'table_styles' => 'テーブルのスタイル',
+        'table_styles_help' => 'サイズガイドのテーブルに適用する Bootstrap のテーブルクラスを選択してください。',
+        'table_style_bordered' => '枠線あり (table-bordered)',
+        'table_style_striped' => '縞模様の行 (table-striped)',
+        'table_style_hover' => 'ホバー時の強調 (table-hover)',
+        'table_style_small' => 'コンパクト表示 (table-sm)',
         'font_size' => 'フォントサイズ (px)',
         'font_size_help' => 'テーブル文字のフォントサイズ（ピクセル）',
         'border_radius' => '角丸 (px)',
@@ -124,4 +130,3 @@ return [
         'settings_saved' => '設定を保存しました',
     ],
 ];
-

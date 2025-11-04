@@ -96,6 +96,12 @@ return [
         'row_text_color_help' => 'Barva besedila vrstic tabele',
         'border_color' => 'Barva obrobe',
         'border_color_help' => 'Barva obrob tabele',
+        'table_styles' => 'Stili tabel',
+        'table_styles_help' => 'Izberite Bootstrap razrede, ki naj se uporabijo za tabelo vodnika po velikostih.',
+        'table_style_bordered' => 'Z obrobo (table-bordered)',
+        'table_style_striped' => 'Izmenične vrstice (table-striped)',
+        'table_style_hover' => 'Učinek ob prehodu (table-hover)',
+        'table_style_small' => 'Kompaktna tabela (table-sm)',
         'font_size' => 'Velikost pisave (px)',
         'font_size_help' => 'Velikost pisave besedila v tabeli v pikselih',
         'border_radius' => 'Polmer zaoblitve (px)',
@@ -124,4 +130,3 @@ return [
         'settings_saved' => 'Nastavitve so bile uspešno shranjene',
     ],
 ];
-

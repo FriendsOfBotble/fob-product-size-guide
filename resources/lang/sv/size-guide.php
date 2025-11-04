@@ -96,6 +96,12 @@ return [
         'row_text_color_help' => 'Textfärg för tabellraderna',
         'border_color' => 'Kantfärg',
         'border_color_help' => 'Färg på tabellens kanter',
+        'table_styles' => 'Tabellstilar',
+        'table_styles_help' => 'Välj vilka Bootstrap-tabellklasser som ska användas för storleksguidens tabell.',
+        'table_style_bordered' => 'Med kantlinjer (table-bordered)',
+        'table_style_striped' => 'Randiga rader (table-striped)',
+        'table_style_hover' => 'Hover-effekt (table-hover)',
+        'table_style_small' => 'Kompakt tabell (table-sm)',
         'font_size' => 'Teckenstorlek (px)',
         'font_size_help' => 'Teckenstorlek för tabelltext i pixlar',
         'border_radius' => 'Hörnradie (px)',
@@ -124,4 +130,3 @@ return [
         'settings_saved' => 'Inställningarna har sparats',
     ],
 ];
-

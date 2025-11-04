@@ -96,6 +96,12 @@ return [
         'row_text_color_help' => 'Taulukon rivien tekstin väri',
         'border_color' => 'Reunuksen väri',
         'border_color_help' => 'Taulukon reunojen väri',
+        'table_styles' => 'Taulukon tyylit',
+        'table_styles_help' => 'Valitse Bootstrapin taulukkoluokat kokotaulukon muotoiluun.',
+        'table_style_bordered' => 'Reunuksellinen (table-bordered)',
+        'table_style_striped' => 'Raidalliset rivit (table-striped)',
+        'table_style_hover' => 'Hover-efekti (table-hover)',
+        'table_style_small' => 'Kompakti taulukko (table-sm)',
         'font_size' => 'Fonttikoko (px)',
         'font_size_help' => 'Taulukon tekstin fonttikoko pikseleinä',
         'border_radius' => 'Reunuksen pyöristys (px)',
@@ -124,4 +130,3 @@ return [
         'settings_saved' => 'Asetukset tallennettu onnistuneesti',
     ],
 ];
-

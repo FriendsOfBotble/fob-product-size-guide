@@ -96,6 +96,12 @@ return [
         'row_text_color_help' => 'ცხრილის სტრიქონების ტექსტის ფერი',
         'border_color' => 'საზღვრის ფერი',
         'border_color_help' => 'ცხრილის საზღვრების ფერი',
+        'table_styles' => 'ცხრილის სტილები',
+        'table_styles_help' => 'აირჩიეთ Bootstrap-ის ცხრილის კლასები ზომების გზამკვლევის ცხრილისთვის.',
+        'table_style_bordered' => 'საზღვრიანი (table-bordered)',
+        'table_style_striped' => 'ზოლიანი სტრიქონები (table-striped)',
+        'table_style_hover' => 'კურსორზე მიყვანის ეფექტი (table-hover)',
+        'table_style_small' => 'კომპაქტური ცხრილი (table-sm)',
         'font_size' => 'შრიფტის ზომა (px)',
         'font_size_help' => 'ცხრილის ტექსტის შრიფტის ზომა პიქსელში',
         'border_radius' => 'კუთხის რადიუსი (px)',
@@ -124,4 +130,3 @@ return [
         'settings_saved' => 'პარამეტრები წარმატებით შეინახა',
     ],
 ];
-

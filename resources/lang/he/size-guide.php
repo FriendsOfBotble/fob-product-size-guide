@@ -96,6 +96,12 @@ return [
         'row_text_color_help' => 'צבע הטקסט לשורות הטבלה',
         'border_color' => 'צבע המסגרת',
         'border_color_help' => 'הצבע למסגרות הטבלה',
+        'table_styles' => 'סגנונות טבלה',
+        'table_styles_help' => 'בחר חוגות Bootstrap שיוחלו על טבלת מדריך המידות.',
+        'table_style_bordered' => 'עם מסגרת (table-bordered)',
+        'table_style_striped' => 'שורות מפוספסות (table-striped)',
+        'table_style_hover' => 'אפקט ריחוף (table-hover)',
+        'table_style_small' => 'טבלה קומפקטית (table-sm)',
         'font_size' => 'גודל גופן (פיקסלים)',
         'font_size_help' => 'גודל הגופן לטקסט הטבלה בפיקסלים',
         'border_radius' => 'רדיוס הפינות (פיקסלים)',
@@ -124,4 +130,3 @@ return [
         'settings_saved' => 'ההגדרות נשמרו בהצלחה',
     ],
 ];
-

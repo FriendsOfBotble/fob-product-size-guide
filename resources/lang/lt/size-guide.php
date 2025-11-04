@@ -96,6 +96,12 @@ return [
         'row_text_color_help' => 'Lentelės eilučių teksto spalva',
         'border_color' => 'Rėmelio spalva',
         'border_color_help' => 'Lentelės rėmelių spalva',
+        'table_styles' => 'Lentelės stiliai',
+        'table_styles_help' => 'Pasirinkite Bootstrap lentelės klases dydžių vadovo lentelei.',
+        'table_style_bordered' => 'Su rėmeliu (table-bordered)',
+        'table_style_striped' => 'Dryžuotos eilutės (table-striped)',
+        'table_style_hover' => 'Efektas užvedus (table-hover)',
+        'table_style_small' => 'Kompaktiška lentelė (table-sm)',
         'font_size' => 'Šrifto dydis (px)',
         'font_size_help' => 'Lentelės teksto šrifto dydis pikseliais',
         'border_radius' => 'Kampų spindulys (px)',
@@ -124,4 +130,3 @@ return [
         'settings_saved' => 'Nustatymai sėkmingai išsaugoti',
     ],
 ];
-

@@ -96,6 +96,12 @@ return [
         'row_text_color_help' => 'Textfarbe für Tabellenzeilen',
         'border_color' => 'Rahmenfarbe',
         'border_color_help' => 'Farbe für Tabellenrahmen',
+        'table_styles' => 'Tabellenstile',
+        'table_styles_help' => 'Wählen Sie zusätzliche Bootstrap-Tabellenklassen für die Größentabelle aus.',
+        'table_style_bordered' => 'Mit Rahmen (table-bordered)',
+        'table_style_striped' => 'Gestreifte Zeilen (table-striped)',
+        'table_style_hover' => 'Hover-Effekt (table-hover)',
+        'table_style_small' => 'Kompakte Tabelle (table-sm)',
         'font_size' => 'Schriftgröße (px)',
         'font_size_help' => 'Schriftgröße des Tabellentextes in Pixel',
         'border_radius' => 'Eckenradius (px)',
@@ -124,4 +130,3 @@ return [
         'settings_saved' => 'Einstellungen erfolgreich gespeichert',
     ],
 ];
-

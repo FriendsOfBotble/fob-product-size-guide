@@ -96,6 +96,12 @@ return [
         'row_text_color_help' => 'Колір тексту рядків таблиці',
         'border_color' => 'Колір рамки',
         'border_color_help' => 'Колір рамок таблиці',
+        'table_styles' => 'Стилі таблиці',
+        'table_styles_help' => 'Виберіть класи таблиці Bootstrap для застосування до таблиці довідника розмірів.',
+        'table_style_bordered' => 'З межами (table-bordered)',
+        'table_style_striped' => 'Смугасті рядки (table-striped)',
+        'table_style_hover' => 'Ефект наведення (table-hover)',
+        'table_style_small' => 'Компактна таблиця (table-sm)',
         'font_size' => 'Розмір шрифту (px)',
         'font_size_help' => 'Розмір шрифту тексту таблиці у пікселях',
         'border_radius' => 'Радіус заокруглення (px)',
@@ -124,4 +130,3 @@ return [
         'settings_saved' => 'Налаштування успішно збережено',
     ],
 ];
-

@@ -96,6 +96,12 @@ return [
         'row_text_color_help' => 'Tablo satırlarının metin rengi',
         'border_color' => 'Kenarlık rengi',
         'border_color_help' => 'Tablo kenarlıklarının rengi',
+        'table_styles' => 'Tablo stilleri',
+        'table_styles_help' => 'Beden rehberi tablosuna uygulanacak Bootstrap tablo sınıflarını seçin.',
+        'table_style_bordered' => 'Kenarlıklı (table-bordered)',
+        'table_style_striped' => 'Şeritli satırlar (table-striped)',
+        'table_style_hover' => 'Üzerine gelindiğinde efekt (table-hover)',
+        'table_style_small' => 'Kompakt tablo (table-sm)',
         'font_size' => 'Yazı tipi boyutu (px)',
         'font_size_help' => 'Tablo metninin yazı tipi boyutu piksel cinsinden',
         'border_radius' => 'Kenarlık yarıçapı (px)',
@@ -124,4 +130,3 @@ return [
         'settings_saved' => 'Ayarlar başarıyla kaydedildi',
     ],
 ];
-
