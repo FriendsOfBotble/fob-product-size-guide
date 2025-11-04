@@ -2,7 +2,6 @@
 
 namespace FriendsOfBotble\ProductSizeGuide\Http\Controllers;
 
-use Botble\Base\Facades\PageTitle;
 use Botble\Base\Http\Actions\DeleteResourceAction;
 use Botble\Base\Http\Controllers\BaseController;
 use Botble\Base\Supports\Breadcrumb;
@@ -21,14 +20,14 @@ class SizeGuideController extends BaseController
 
     public function index(SizeGuideTable $table)
     {
-        PageTitle::setTitle(trans('plugins/fob-product-size-guide::size-guide.name'));
+        $this->pageTitle(trans('plugins/fob-product-size-guide::size-guide.name'));
 
         return $table->renderTable();
     }
 
     public function create()
     {
-        PageTitle::setTitle(trans('plugins/fob-product-size-guide::size-guide.create'));
+        $this->pageTitle(trans('plugins/fob-product-size-guide::size-guide.create'));
 
         return SizeGuideForm::create()->renderForm();
     }
@@ -47,7 +46,7 @@ class SizeGuideController extends BaseController
 
     public function edit(SizeGuide $sizeGuide)
     {
-        PageTitle::setTitle(trans('core/base::forms.edit_item', ['name' => $sizeGuide->name]));
+        $this->pageTitle(trans('core/base::forms.edit_item', ['name' => $sizeGuide->name]));
 
         return SizeGuideForm::createFromModel($sizeGuide)->renderForm();
     }

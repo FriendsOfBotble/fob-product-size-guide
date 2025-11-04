@@ -11,5 +11,7 @@ class Plugin extends PluginOperationAbstract
     {
         Schema::dropIfExists('fob_product_size_guide_relations');
         Schema::dropIfExists('fob_product_size_guides');
+        Schema::dropIfExists('fob_size_guide_headers');
+        Schema::dropIfExists('fob_size_guide_headers_translations');
     }
 }

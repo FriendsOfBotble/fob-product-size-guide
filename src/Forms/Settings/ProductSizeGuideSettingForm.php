@@ -35,7 +35,6 @@ class ProductSizeGuideSettingForm extends SettingForm
                     'text' => trans('plugins/fob-product-size-guide::size-guide.settings.display_mode_help'),
                 ],
             ])
-            // Conditional mode settings
             ->addOpenCollapsible('product_size_guide_display_mode', 'conditional', $displayMode)
             ->add('product_size_guide_row_threshold', NumberField::class, [
                 'label' => trans('plugins/fob-product-size-guide::size-guide.settings.row_threshold'),

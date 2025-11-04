@@ -11,7 +11,7 @@ return new class () extends Migration {
             return;
         }
 
-        Schema::create('fob_product_size_guides', function (Blueprint $table) {
+        Schema::create('fob_product_size_guides', function (Blueprint $table): void {
             $table->id();
             $table->string('name');
             $table->text('description')->nullable();

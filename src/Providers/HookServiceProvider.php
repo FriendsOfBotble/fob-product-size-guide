@@ -8,18 +8,16 @@ use Botble\Ecommerce\Models\Brand;
 use Botble\Ecommerce\Models\Product;
 use Botble\Ecommerce\Models\ProductCategory;
 use FriendsOfBotble\ProductSizeGuide\Services\SizeGuideService;
-use Illuminate\Support\Facades\Request;
 
 class HookServiceProvider extends ServiceProvider
 {
-    protected static $currentProduct = null;
+    protected static ?Product $currentProduct = null;
 
     public function boot(): void
     {
         add_filter(BASE_FILTER_AFTER_SETTING_CONTENT, [$this, 'addSettings'], 49);
 
-        // Product metabox
-        add_action(BASE_ACTION_META_BOXES, function ($context, $object) {
+        add_action(BASE_ACTION_META_BOXES, function ($context, $object): void {
             if (get_class($object) === Product::class && $context === 'advanced') {
                 $sizeGuideService = app(SizeGuideService::class);
 
@@ -39,7 +37,7 @@ class HookServiceProvider extends ServiceProvider
             }
         }, 30, 2);
 
-        add_action(BASE_ACTION_AFTER_CREATE_CONTENT, function ($type, $request, $object) {
+        add_action(BASE_ACTION_AFTER_CREATE_CONTENT, function ($type, $request, $object): void {
             if (get_class($object) === Product::class && $request->has('size_guide_id')) {
                 $sizeGuideService = app(SizeGuideService::class);
                 $sizeGuideId = $request->input('size_guide_id') ?: null;
@@ -47,7 +45,7 @@ class HookServiceProvider extends ServiceProvider
             }
         }, 30, 3);
 
-        add_action(BASE_ACTION_AFTER_UPDATE_CONTENT, function ($type, $request, $object) {
+        add_action(BASE_ACTION_AFTER_UPDATE_CONTENT, function ($type, $request, $object): void {
             if (get_class($object) === Product::class && $request->has('size_guide_id')) {
                 $sizeGuideService = app(SizeGuideService::class);
                 $sizeGuideId = $request->input('size_guide_id') ?: null;
@@ -55,8 +53,7 @@ class HookServiceProvider extends ServiceProvider
             }
         }, 30, 3);
 
-        // Category metabox
-        add_action(BASE_ACTION_META_BOXES, function ($context, $object) {
+        add_action(BASE_ACTION_META_BOXES, function ($context, $object): void {
             if (get_class($object) === ProductCategory::class && $context === 'advanced') {
                 $sizeGuideService = app(SizeGuideService::class);
 
@@ -76,7 +73,7 @@ class HookServiceProvider extends ServiceProvider
             }
         }, 30, 2);
 
-        add_action(BASE_ACTION_AFTER_CREATE_CONTENT, function ($type, $request, $object) {
+        add_action(BASE_ACTION_AFTER_CREATE_CONTENT, function ($type, $request, $object): void {
             if (get_class($object) === ProductCategory::class && $request->has('size_guide_id')) {
                 $sizeGuideService = app(SizeGuideService::class);
                 $sizeGuideId = $request->input('size_guide_id') ?: null;
@@ -84,7 +81,7 @@ class HookServiceProvider extends ServiceProvider
             }
         }, 30, 3);
 
-        add_action(BASE_ACTION_AFTER_UPDATE_CONTENT, function ($type, $request, $object) {
+        add_action(BASE_ACTION_AFTER_UPDATE_CONTENT, function ($type, $request, $object): void {
             if (get_class($object) === ProductCategory::class && $request->has('size_guide_id')) {
                 $sizeGuideService = app(SizeGuideService::class);
                 $sizeGuideId = $request->input('size_guide_id') ?: null;
@@ -92,8 +89,7 @@ class HookServiceProvider extends ServiceProvider
             }
         }, 30, 3);
 
-        // Brand metabox
-        add_action(BASE_ACTION_META_BOXES, function ($context, $object) {
+        add_action(BASE_ACTION_META_BOXES, function ($context, $object): void {
             if (get_class($object) === Brand::class && $context === 'advanced') {
                 $sizeGuideService = app(SizeGuideService::class);
 
@@ -113,7 +109,7 @@ class HookServiceProvider extends ServiceProvider
             }
         }, 30, 2);
 
-        add_action(BASE_ACTION_AFTER_CREATE_CONTENT, function ($type, $request, $object) {
+        add_action(BASE_ACTION_AFTER_CREATE_CONTENT, function ($type, $request, $object): void {
             if (get_class($object) === Brand::class && $request->has('size_guide_id')) {
                 $sizeGuideService = app(SizeGuideService::class);
                 $sizeGuideId = $request->input('size_guide_id') ?: null;
@@ -121,7 +117,7 @@ class HookServiceProvider extends ServiceProvider
             }
         }, 30, 3);
 
-        add_action(BASE_ACTION_AFTER_UPDATE_CONTENT, function ($type, $request, $object) {
+        add_action(BASE_ACTION_AFTER_UPDATE_CONTENT, function ($type, $request, $object): void {
             if (get_class($object) === Brand::class && $request->has('size_guide_id')) {
                 $sizeGuideService = app(SizeGuideService::class);
                 $sizeGuideId = $request->input('size_guide_id') ?: null;
@@ -129,10 +125,8 @@ class HookServiceProvider extends ServiceProvider
             }
         }, 30, 3);
 
-        // Frontend display - button/inline content
         add_filter(ECOMMERCE_PRODUCT_DETAIL_EXTRA_HTML, function ($html, $product) {
             if ($product instanceof Product) {
-                // Store product for later use in footer
                 self::$currentProduct = $product;
 
                 $sizeGuideService = app(SizeGuideService::class);
@@ -146,7 +140,6 @@ class HookServiceProvider extends ServiceProvider
             return $html;
         }, 150, 2);
 
-        // Frontend display - modal in footer
         add_filter(THEME_FRONT_FOOTER, function ($html) {
             $product = self::$currentProduct;
 
@@ -155,11 +148,10 @@ class HookServiceProvider extends ServiceProvider
                 $sizeGuide = $sizeGuideService->getSizeGuideForProduct($product);
 
                 if ($sizeGuide) {
-                    $displayMode = \setting('product_size_guide_display_mode', 'inline');
-                    $rowThreshold = \setting('product_size_guide_row_threshold', 10);
+                    $displayMode = setting('product_size_guide_display_mode', 'inline');
+                    $rowThreshold = setting('product_size_guide_row_threshold', 10);
                     $rowCount = is_array($sizeGuide->table_rows) ? count($sizeGuide->table_rows) : 0;
 
-                    // Determine if modal should be shown
                     $showModal = false;
                     if ($displayMode === 'popup') {
                         $showModal = true;

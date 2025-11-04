@@ -2,7 +2,6 @@
 
 namespace FriendsOfBotble\ProductSizeGuide\Services;
 
-use Botble\Ecommerce\Models\Brand;
 use Botble\Ecommerce\Models\Product;
 use FriendsOfBotble\ProductSizeGuide\Models\SizeGuide;
 use FriendsOfBotble\ProductSizeGuide\Models\SizeGuideRelation;
@@ -11,7 +10,6 @@ class SizeGuideService
 {
     public function getSizeGuideForProduct(Product $product): ?SizeGuide
     {
-        // Priority 1: Check product-level assignment
         $relation = SizeGuideRelation::query()
             ->where('reference_type', 'product')
             ->where('reference_id', $product->getKey())
@@ -21,7 +19,6 @@ class SizeGuideService
             return $relation->sizeGuide;
         }
 
-        // Priority 2: Check category-level assignment
         if ($product->categories->isNotEmpty()) {
             foreach ($product->categories as $category) {
                 $relation = SizeGuideRelation::query()
@@ -35,7 +32,6 @@ class SizeGuideService
             }
         }
 
-        // Priority 3: Check brand-level assignment
         if ($product->brand_id) {
             $relation = SizeGuideRelation::query()
                 ->where('reference_type', 'brand')
@@ -52,13 +48,11 @@ class SizeGuideService
 
     public function assignSizeGuide(?int $sizeGuideId, int $referenceId, string $referenceType): void
     {
-        // Remove existing assignment
         SizeGuideRelation::query()
             ->where('reference_type', $referenceType)
             ->where('reference_id', $referenceId)
             ->delete();
 
-        // Create new assignment if size guide is selected
         if ($sizeGuideId) {
             SizeGuideRelation::query()->create([
                 'size_guide_id' => $sizeGuideId,

@@ -50,7 +50,7 @@ class SizeGuideHeaderTable extends TableAbstract
                 CreatedAtBulkChange::make(),
             ])
             ->addBulkAction(DeleteBulkAction::make()->permission('size-guide-headers.destroy'))
-            ->queryUsing(function (Builder $query) {
+            ->queryUsing(function (Builder $query): void {
                 $query->select([
                     'id',
                     'name',

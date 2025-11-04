@@ -11,7 +11,7 @@ return new class () extends Migration {
             return;
         }
 
-        Schema::create('fob_size_guide_headers', function (Blueprint $table) {
+        Schema::create('fob_size_guide_headers', function (Blueprint $table): void {
             $table->id();
             $table->string('name'); // e.g., "Size", "US Size", "Chest"
             $table->string('slug')->unique(); // e.g., "size", "us_size", "chest"

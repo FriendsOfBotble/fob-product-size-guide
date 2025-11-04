@@ -3,7 +3,6 @@
 namespace FriendsOfBotble\ProductSizeGuide\Http\Controllers;
 
 use Botble\Base\Events\CreatedContentEvent;
-use Botble\Base\Events\DeletedContentEvent;
 use Botble\Base\Events\UpdatedContentEvent;
 use Botble\Base\Facades\PageTitle;
 use Botble\Base\Http\Actions\DeleteResourceAction;

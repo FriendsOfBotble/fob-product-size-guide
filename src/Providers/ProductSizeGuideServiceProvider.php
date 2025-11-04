@@ -34,7 +34,7 @@ class ProductSizeGuideServiceProvider extends ServiceProvider
 
         $this->app->register(HookServiceProvider::class);
 
-        DashboardMenu::beforeRetrieving(function () {
+        DashboardMenu::beforeRetrieving(function (): void {
             DashboardMenu::make()
                 ->registerItem([
                     'id' => 'cms-plugins-product-size-guide',
@@ -74,7 +74,7 @@ class ProductSizeGuideServiceProvider extends ServiceProvider
                 ]);
         });
 
-        $this->app->booted(function () {
+        $this->app->booted(function (): void {
             $this->app->make(ThemeSupport::class)
                 ->registerToastNotification();
 

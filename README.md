@@ -33,6 +33,20 @@ Go to the **Admin Panel** and click on the **Plugins** tab. Click on the "Add ne
 - **Multi-language**: Full translation support
 - **Theme Independent**: Works with all Botble themes
 
+## Screenshots
+
+![Size guides list](art/size-guides.png)
+
+![Size guide form](art/size-guide-form.png)
+
+![Size guide headers](art/size-guide-headers.png)
+
+![Assign size guide to product](art/assign-size-guide-to-product.png)
+
+![Settings screen](art/settings.png)
+
+![Size guide displayed in product description](art/size-guide-display-in-product-description.png)
+
 ## Usage
 
 ### Creating Size Guides
