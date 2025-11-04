@@ -1,0 +1,11 @@
+{
+    "id": "friendsofbotble/fob-product-size-guide",
+    "name": "FOB Product Size Guide",
+    "namespace": "FriendsOfBotble\\ProductSizeGuide\\",
+    "provider": "FriendsOfBotble\\ProductSizeGuide\\Providers\\ProductSizeGuideServiceProvider",
+    "author": "Friends Of Botble",
+    "url": "https://friendsofbotble.com",
+    "version": "1.0.0",
+    "description": "Display product size guides with customizable tables and images",
+    "minimum_core_version": "7.5.0"
+}

@@ -1,0 +1,37 @@
+/**
+ * Size Guide Admin Styles (Tabler UI)
+ */
+
+#size-guide-table-builder {
+    .column-header-item,
+    .table-row-item {
+        transition: opacity 0.2s ease;
+    }
+
+    .remove-column-btn,
+    .remove-row-btn {
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    #table-preview-wrapper {
+        background-color: #f8f9fa;
+        padding: 1rem;
+        border-radius: 0.5rem;
+
+        #table-preview {
+            background-color: white;
+            margin-bottom: 0;
+
+            th {
+                background-color: #f1f5f9;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .alert {
+        font-size: 0.875rem;
+    }
+}

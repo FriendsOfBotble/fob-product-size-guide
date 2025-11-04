@@ -1,0 +1,118 @@
+/**
+ * Size Guide Frontend Styles (Bootstrap 5)
+ */
+
+.product-size-guide-wrapper {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+
+    .size-guide-inline {
+        .size-guide-header {
+            cursor: pointer;
+            transition: opacity 0.15s ease-in-out;
+
+            &:hover {
+                opacity: 0.8;
+                text-decoration: underline;
+            }
+
+            &:focus {
+                outline: none;
+                opacity: 0.8;
+            }
+
+            .size-guide-label {
+                font-weight: 500;
+            }
+
+            .chevron-icon {
+                transition: transform 0.3s ease;
+                flex-shrink: 0;
+
+                &.expanded {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        .size-guide-image {
+            img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 0.5rem;
+            }
+        }
+
+        .table {
+            margin-bottom: 0;
+
+            thead th {
+                font-weight: 600;
+                background-color: #f8f9fa;
+                border-bottom: 2px solid #dee2e6;
+            }
+
+            tbody td {
+                vertical-align: middle;
+            }
+        }
+    }
+
+    .size-guide-popup {
+        a {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+
+            i {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    // Modal styles
+    #sizeGuideModal {
+        .size-guide-image {
+            img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 0.5rem;
+            }
+        }
+
+        .table {
+            margin-bottom: 0;
+
+            thead th {
+                font-weight: 600;
+                background-color: #f8f9fa;
+                border-bottom: 2px solid #dee2e6;
+                white-space: nowrap;
+            }
+
+            tbody td {
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+// Responsive adjustments
+@media (max-width: 767.98px) {
+    .product-size-guide-wrapper {
+        .table {
+            font-size: 0.875rem;
+
+            thead th,
+            tbody td {
+                padding: 0.5rem;
+            }
+        }
+    }
+
+    #sizeGuideModal {
+        .modal-dialog {
+            margin: 0.5rem;
+        }
+    }
+}

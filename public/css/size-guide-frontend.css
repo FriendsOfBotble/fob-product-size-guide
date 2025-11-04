@@ -1,0 +1,67 @@
+/**
+ * Size Guide Frontend Styles (Bootstrap 5)
+ */
+.product-size-guide-wrapper {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.product-size-guide-wrapper .size-guide-inline h5 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.product-size-guide-wrapper .size-guide-inline .size-guide-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+.product-size-guide-wrapper .size-guide-inline .table {
+  margin-bottom: 0;
+}
+.product-size-guide-wrapper .size-guide-inline .table thead th {
+  font-weight: 600;
+  background-color: #f8f9fa;
+  border-bottom: 2px solid #dee2e6;
+}
+.product-size-guide-wrapper .size-guide-inline .table tbody td {
+  vertical-align: middle;
+}
+.product-size-guide-wrapper .size-guide-popup a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+.product-size-guide-wrapper .size-guide-popup a i {
+  font-size: 1rem;
+}
+.product-size-guide-wrapper #sizeGuideModal .size-guide-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+.product-size-guide-wrapper #sizeGuideModal .table {
+  margin-bottom: 0;
+}
+.product-size-guide-wrapper #sizeGuideModal .table thead th {
+  font-weight: 600;
+  background-color: #f8f9fa;
+  border-bottom: 2px solid #dee2e6;
+  white-space: nowrap;
+}
+.product-size-guide-wrapper #sizeGuideModal .table tbody td {
+  vertical-align: middle;
+}
+
+@media (max-width: 767.98px) {
+  .product-size-guide-wrapper .table {
+    font-size: 0.875rem;
+  }
+  .product-size-guide-wrapper .table thead th,
+  .product-size-guide-wrapper .table tbody td {
+    padding: 0.5rem;
+  }
+  #sizeGuideModal .modal-dialog {
+    margin: 0.5rem;
+  }
+}
+
+/*# sourceMappingURL=size-guide-frontend.css.map */
