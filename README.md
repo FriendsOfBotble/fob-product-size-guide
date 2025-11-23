@@ -140,20 +140,6 @@ The size guide appears on product detail pages after the product attributes sect
 **Popup Mode**: "Size Guide" link opens Bootstrap 5 modal
 **Conditional Mode**: Auto-switches based on table length
 
-## Screenshots
-
-### Size Guide in Product Page
-![Size Guide Display](./art/screenshot.png)
-*Professional size guide with image and responsive table display*
-
-### Admin Table Builder
-![Table Builder](./art/admin.png)
-*Easy-to-use table builder with add/remove rows and columns*
-
-### Settings Page
-![Settings](./art/settings.png)
-*Comprehensive settings for display and appearance customization*
-
 ## Development
 
 ### Building Assets
