@@ -46,7 +46,7 @@ class SizeGuideService
         return null;
     }
 
-    public function assignSizeGuide(?int $sizeGuideId, int $referenceId, string $referenceType): void
+    public function assignSizeGuide(int|string|null $sizeGuideId, int|string $referenceId, string $referenceType): void
     {
         SizeGuideRelation::query()
             ->where('reference_type', $referenceType)
@@ -62,8 +62,12 @@ class SizeGuideService
         }
     }
 
-    public function getAssignedSizeGuideId(int $referenceId, string $referenceType): ?int
+    public function getAssignedSizeGuideId(int|string|null $referenceId, string $referenceType): int|string|null
     {
+        if (! $referenceId) {
+            return null;
+        }
+
         $relation = SizeGuideRelation::query()
             ->where('reference_type', $referenceType)
             ->where('reference_id', $referenceId)

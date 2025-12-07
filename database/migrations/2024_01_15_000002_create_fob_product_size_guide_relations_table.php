@@ -14,7 +14,7 @@ return new class () extends Migration {
         Schema::create('fob_product_size_guide_relations', function (Blueprint $table): void {
             $table->id();
             $table->foreignId('size_guide_id')->constrained('fob_product_size_guides')->cascadeOnDelete();
-            $table->unsignedBigInteger('reference_id');
+            $table->foreignId('reference_id');
             $table->string('reference_type', 60); // 'product', 'category', 'brand'
             $table->timestamps();
 

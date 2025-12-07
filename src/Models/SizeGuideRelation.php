@@ -16,10 +16,7 @@ class SizeGuideRelation extends BaseModel
         'reference_type',
     ];
 
-    protected $casts = [
-        'size_guide_id' => 'integer',
-        'reference_id' => 'integer',
-    ];
+    protected $casts = [];
 
     public function sizeGuide(): BelongsTo
     {
