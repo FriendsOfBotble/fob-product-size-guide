@@ -38,6 +38,8 @@ return [
         'select_header' => 'Select column header',
         'no_columns' => 'No columns yet. Click "Add Column" to start.',
         'no_rows' => 'No rows yet. Click "Add Row" to add data.',
+        'preview' => 'Preview',
+        'add_first_column' => 'Please add at least one column first.',
     ],
 
     'headers' => [

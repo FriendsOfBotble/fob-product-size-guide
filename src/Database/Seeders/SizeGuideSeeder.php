@@ -34,34 +34,56 @@ class SizeGuideSeeder extends Seeder
             ['name' => 'Chest', 'slug' => 'chest', 'category' => 'measurement', 'order' => 12],
             ['name' => 'Waist', 'slug' => 'waist', 'category' => 'measurement', 'order' => 13],
             ['name' => 'Hips', 'slug' => 'hips', 'category' => 'measurement', 'order' => 14],
-            ['name' => 'Length', 'slug' => 'length', 'category' => 'measurement', 'order' => 15],
-            ['name' => 'Width', 'slug' => 'width', 'category' => 'measurement', 'order' => 16],
-            ['name' => 'Height', 'slug' => 'height', 'category' => 'measurement', 'order' => 17],
-            ['name' => 'Shoulder', 'slug' => 'shoulder', 'category' => 'measurement', 'order' => 18],
-            ['name' => 'Sleeve', 'slug' => 'sleeve', 'category' => 'measurement', 'order' => 19],
-            ['name' => 'Inseam', 'slug' => 'inseam', 'category' => 'measurement', 'order' => 20],
-            ['name' => 'Neck', 'slug' => 'neck', 'category' => 'measurement', 'order' => 21],
-            ['name' => 'Bust', 'slug' => 'bust', 'category' => 'measurement', 'order' => 22],
+            ['name' => 'Hip', 'slug' => 'hip', 'category' => 'measurement', 'order' => 15],
+            ['name' => 'Length', 'slug' => 'length', 'category' => 'measurement', 'order' => 16],
+            ['name' => 'Width', 'slug' => 'width', 'category' => 'measurement', 'order' => 17],
+            ['name' => 'Height', 'slug' => 'height', 'category' => 'measurement', 'order' => 18],
+            ['name' => 'Shoulder', 'slug' => 'shoulder', 'category' => 'measurement', 'order' => 19],
+            ['name' => 'Sleeve', 'slug' => 'sleeve', 'category' => 'measurement', 'order' => 20],
+            ['name' => 'Inseam', 'slug' => 'inseam', 'category' => 'measurement', 'order' => 21],
+            ['name' => 'Neck', 'slug' => 'neck', 'category' => 'measurement', 'order' => 22],
+            ['name' => 'Bust', 'slug' => 'bust', 'category' => 'measurement', 'order' => 23],
+
+            // Measurement + unit combinations used in sample size guides
+            ['name' => 'Foot Length (cm)', 'slug' => 'foot_length_cm', 'category' => 'measurement', 'order' => 30],
+            ['name' => 'Bust (cm)', 'slug' => 'bust_cm', 'category' => 'measurement', 'order' => 31],
+            ['name' => 'Waist (cm)', 'slug' => 'waist_cm', 'category' => 'measurement', 'order' => 32],
+            ['name' => 'Waist (inches)', 'slug' => 'waist_inches', 'category' => 'measurement', 'order' => 33],
+            ['name' => 'Hip (cm)', 'slug' => 'hip_cm', 'category' => 'measurement', 'order' => 34],
+            ['name' => 'Chest (cm)', 'slug' => 'chest_cm', 'category' => 'measurement', 'order' => 35],
+            ['name' => 'Neck (cm)', 'slug' => 'neck_cm', 'category' => 'measurement', 'order' => 36],
+            ['name' => 'Sleeve Length (cm)', 'slug' => 'sleeve_length_cm', 'category' => 'measurement', 'order' => 37],
+            ['name' => 'Height (cm)', 'slug' => 'height_cm', 'category' => 'measurement', 'order' => 38],
+            ['name' => 'Diameter (mm)', 'slug' => 'diameter_mm', 'category' => 'measurement', 'order' => 39],
+            ['name' => 'Circumference (mm)', 'slug' => 'circumference_mm', 'category' => 'measurement', 'order' => 40],
+            ['name' => 'Hand Circumference (cm)', 'slug' => 'hand_circumference_cm', 'category' => 'measurement', 'order' => 41],
+            ['name' => 'Hand Length (cm)', 'slug' => 'hand_length_cm', 'category' => 'measurement', 'order' => 42],
+            ['name' => 'Head Circumference (cm)', 'slug' => 'head_circumference_cm', 'category' => 'measurement', 'order' => 43],
+            ['name' => 'Head Circumference (inches)', 'slug' => 'head_circumference_inches', 'category' => 'measurement', 'order' => 44],
+            ['name' => 'Inseam (cm)', 'slug' => 'inseam_cm', 'category' => 'measurement', 'order' => 45],
+            ['name' => 'Inseam (inches)', 'slug' => 'inseam_inches', 'category' => 'measurement', 'order' => 46],
 
             // Other measurements
-            ['name' => 'Weight', 'slug' => 'weight', 'category' => 'general', 'order' => 23],
-            ['name' => 'Age', 'slug' => 'age', 'category' => 'general', 'order' => 24],
+            ['name' => 'Weight', 'slug' => 'weight', 'category' => 'general', 'order' => 50],
+            ['name' => 'Age', 'slug' => 'age', 'category' => 'general', 'order' => 51],
 
             // Units
-            ['name' => 'CM', 'slug' => 'cm', 'category' => 'unit', 'order' => 25],
-            ['name' => 'Inches', 'slug' => 'inches', 'category' => 'unit', 'order' => 26],
-            ['name' => 'KG', 'slug' => 'kg', 'category' => 'unit', 'order' => 27],
-            ['name' => 'LBS', 'slug' => 'lbs', 'category' => 'unit', 'order' => 28],
+            ['name' => 'CM', 'slug' => 'cm', 'category' => 'unit', 'order' => 60],
+            ['name' => 'Inches', 'slug' => 'inches', 'category' => 'unit', 'order' => 61],
+            ['name' => 'KG', 'slug' => 'kg', 'category' => 'unit', 'order' => 62],
+            ['name' => 'LBS', 'slug' => 'lbs', 'category' => 'unit', 'order' => 63],
         ];
 
         foreach ($headers as $header) {
-            SizeGuideHeader::query()->create([
-                'name' => $header['name'],
-                'slug' => $header['slug'],
-                'category' => $header['category'],
-                'order' => $header['order'],
-                'status' => BaseStatusEnum::PUBLISHED,
-            ]);
+            SizeGuideHeader::query()->updateOrCreate(
+                ['slug' => $header['slug']],
+                [
+                    'name' => $header['name'],
+                    'category' => $header['category'],
+                    'order' => $header['order'],
+                    'status' => BaseStatusEnum::PUBLISHED,
+                ]
+            );
         }
 
         $this->command->info('Created ' . count($headers) . ' size guide headers.');
@@ -71,7 +93,7 @@ class SizeGuideSeeder extends Seeder
                 'name' => 'Women\'s Shoe Size Guide',
                 'description' => 'International women\'s shoe size conversion chart',
                 'image' => null,
-                'table_headers' => ['US Size', 'EU Size', 'UK Size', 'Foot Length (cm)'],
+                'table_headers' => ['us_size', 'eu_size', 'uk_size', 'foot_length_cm'],
                 'table_rows' => [
                     ['5', '35-36', '3', '22.0'],
                     ['5.5', '36', '3.5', '22.5'],
@@ -92,7 +114,7 @@ class SizeGuideSeeder extends Seeder
                 'name' => 'Men\'s Shoe Size Guide',
                 'description' => 'International men\'s shoe size conversion chart',
                 'image' => null,
-                'table_headers' => ['US Size', 'EU Size', 'UK Size', 'Foot Length (cm)'],
+                'table_headers' => ['us_size', 'eu_size', 'uk_size', 'foot_length_cm'],
                 'table_rows' => [
                     ['6', '39', '5.5', '24.0'],
                     ['6.5', '39-40', '6', '24.5'],
@@ -115,7 +137,7 @@ class SizeGuideSeeder extends Seeder
                 'name' => 'Women\'s Clothing Size Guide',
                 'description' => 'International women\'s clothing size chart',
                 'image' => null,
-                'table_headers' => ['US Size', 'EU Size', 'UK Size', 'Bust (cm)', 'Waist (cm)', 'Hip (cm)'],
+                'table_headers' => ['us_size', 'eu_size', 'uk_size', 'bust_cm', 'waist_cm', 'hip_cm'],
                 'table_rows' => [
                     ['XS', '32', '6', '78-82', '60-64', '86-90'],
                     ['S', '34-36', '8-10', '82-86', '64-68', '90-94'],
@@ -131,7 +153,7 @@ class SizeGuideSeeder extends Seeder
                 'name' => 'Men\'s Clothing Size Guide',
                 'description' => 'International men\'s clothing size chart',
                 'image' => null,
-                'table_headers' => ['US Size', 'EU Size', 'UK Size', 'Chest (cm)', 'Waist (cm)', 'Hip (cm)'],
+                'table_headers' => ['us_size', 'eu_size', 'uk_size', 'chest_cm', 'waist_cm', 'hip_cm'],
                 'table_rows' => [
                     ['XS', '44', '34', '86-89', '71-76', '86-89'],
                     ['S', '46-48', '36-38', '89-94', '76-81', '89-94'],
@@ -147,7 +169,7 @@ class SizeGuideSeeder extends Seeder
                 'name' => 'Men\'s Shirt Size Guide',
                 'description' => 'Men\'s dress shirt size conversion',
                 'image' => null,
-                'table_headers' => ['Size', 'Neck (cm)', 'Chest (cm)', 'Sleeve Length (cm)'],
+                'table_headers' => ['size', 'neck_cm', 'chest_cm', 'sleeve_length_cm'],
                 'table_rows' => [
                     ['S', '37-38', '92-97', '81-84'],
                     ['M', '39-40', '97-102', '84-87'],
@@ -163,7 +185,7 @@ class SizeGuideSeeder extends Seeder
                 'name' => 'Kids Clothing Size Guide',
                 'description' => 'Children\'s clothing size chart by age',
                 'image' => null,
-                'table_headers' => ['Age', 'Height (cm)', 'Chest (cm)', 'Waist (cm)'],
+                'table_headers' => ['age', 'height_cm', 'chest_cm', 'waist_cm'],
                 'table_rows' => [
                     ['2-3 years', '92-98', '52-54', '50-52'],
                     ['3-4 years', '98-104', '54-56', '52-53'],
@@ -183,7 +205,7 @@ class SizeGuideSeeder extends Seeder
                 'name' => 'Ring Size Guide',
                 'description' => 'International ring size conversion chart',
                 'image' => null,
-                'table_headers' => ['US Size', 'EU Size', 'UK Size', 'Diameter (mm)', 'Circumference (mm)'],
+                'table_headers' => ['us_size', 'eu_size', 'uk_size', 'diameter_mm', 'circumference_mm'],
                 'table_rows' => [
                     ['5', '49', 'J', '15.7', '49.3'],
                     ['5.5', '50.5', 'K', '16.1', '50.6'],
@@ -204,7 +226,7 @@ class SizeGuideSeeder extends Seeder
                 'name' => 'Glove Size Guide',
                 'description' => 'Glove size chart by hand circumference',
                 'image' => null,
-                'table_headers' => ['Size', 'Hand Circumference (cm)', 'Hand Length (cm)'],
+                'table_headers' => ['size', 'hand_circumference_cm', 'hand_length_cm'],
                 'table_rows' => [
                     ['XS', '15-17', '16-17'],
                     ['S', '17-19', '17-18'],
@@ -220,7 +242,7 @@ class SizeGuideSeeder extends Seeder
                 'name' => 'Hat Size Guide',
                 'description' => 'Hat and cap size conversion',
                 'image' => null,
-                'table_headers' => ['Size', 'Head Circumference (cm)', 'Head Circumference (inches)'],
+                'table_headers' => ['size', 'head_circumference_cm', 'head_circumference_inches'],
                 'table_rows' => [
                     ['XS', '53-54', '20.9-21.3'],
                     ['S', '55-56', '21.7-22.0'],
@@ -236,7 +258,7 @@ class SizeGuideSeeder extends Seeder
                 'name' => 'Jeans Size Guide',
                 'description' => 'Jeans size conversion for waist and length',
                 'image' => null,
-                'table_headers' => ['Size', 'Waist (inches)', 'Waist (cm)', 'Inseam (inches)', 'Inseam (cm)'],
+                'table_headers' => ['size', 'waist_inches', 'waist_cm', 'inseam_inches', 'inseam_cm'],
                 'table_rows' => [
                     ['28/30', '28', '71', '30', '76'],
                     ['29/30', '29', '74', '30', '76'],

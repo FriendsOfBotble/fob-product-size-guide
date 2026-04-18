@@ -1,10 +1,40 @@
+@php
+    $availableHeaders = \FriendsOfBotble\ProductSizeGuide\Models\SizeGuideHeader::query()
+        ->where('status', \Botble\Base\Enums\BaseStatusEnum::PUBLISHED)
+        ->orderBy('order')
+        ->orderBy('name')
+        ->get(['id', 'name', 'slug']);
+
+    $headerNameMap = $availableHeaders->pluck('name', 'slug');
+    $headerSlugByName = $availableHeaders->pluck('slug', 'name');
+
+    // Auto-resolve legacy values stored as display names (e.g. "US Size") to their slug ("us_size").
+    $normalizedHeaders = collect($headers)
+        ->map(fn ($value) => $headerSlugByName->get($value, $value))
+        ->values()
+        ->all();
+
+    $builderData = [
+        'availableHeaders' => $availableHeaders->map(fn ($item) => [
+            'slug' => $item->slug,
+            'name' => $item->name,
+        ])->values()->all(),
+        'translations' => [
+            'selectHeader' => trans('plugins/fob-product-size-guide::size-guide.table_builder.select_header'),
+            'noColumns' => trans('plugins/fob-product-size-guide::size-guide.table_builder.no_columns'),
+            'noRows' => trans('plugins/fob-product-size-guide::size-guide.table_builder.no_rows'),
+            'addFirstColumn' => trans('plugins/fob-product-size-guide::size-guide.table_builder.add_first_column'),
+        ],
+    ];
+@endphp
+
 <div class="form-group mb-3">
     <label class="form-label">{{ trans('plugins/fob-product-size-guide::size-guide.form.table_builder') }}</label>
     <div class="form-text mb-3">{{ trans('plugins/fob-product-size-guide::size-guide.form.table_builder_helper') }}</div>
 
     <div class="card">
         <div class="card-body">
-            <div id="size-guide-table-builder">
+            <div id="size-guide-table-builder" data-builder-config="{{ json_encode($builderData) }}">
                 <!-- Column Headers Section -->
                 <div class="mb-3">
                     <div class="d-flex justify-content-between align-items-center mb-2">
@@ -15,21 +45,14 @@
                         </button>
                     </div>
                     <div id="table-headers" class="row g-2">
-                        @if(empty($headers))
+                        @if(empty($normalizedHeaders))
                             <div class="col-12">
                                 <div class="alert alert-info mb-0">
                                     {{ trans('plugins/fob-product-size-guide::size-guide.table_builder.no_columns') }}
                                 </div>
                             </div>
                         @else
-                            @php
-                                $availableHeaders = \FriendsOfBotble\ProductSizeGuide\Models\SizeGuideHeader::query()
-                                    ->where('status', \Botble\Base\Enums\BaseStatusEnum::PUBLISHED)
-                                    ->orderBy('order')
-                                    ->orderBy('name')
-                                    ->get();
-                            @endphp
-                            @foreach($headers as $index => $header)
+                            @foreach($normalizedHeaders as $index => $header)
                                 <div class="col-md-3 col-sm-6 column-header-item" data-index="{{ $index }}">
                                     <div class="input-group">
                                         <select class="form-control column-header-input"
@@ -40,6 +63,9 @@
                                                     {{ $availableHeader->name }}
                                                 </option>
                                             @endforeach
+                                            @if($header && ! $headerNameMap->has($header))
+                                                <option value="{{ $header }}" selected>{{ $header }}</option>
+                                            @endif
                                         </select>
                                         <button type="button" class="btn btn-danger btn-icon remove-column-btn" data-index="{{ $index }}">
                                             <x-core::icon name="ti ti-trash" />
@@ -91,14 +117,14 @@
                 </div>
 
                 <!-- Preview Section -->
-                <div class="mt-4" id="table-preview-wrapper" style="display: {{ empty($headers) && empty($rows) ? 'none' : 'block' }}">
-                    <h4 class="mb-2">Preview</h4>
+                <div class="mt-4" id="table-preview-wrapper" style="display: {{ empty($normalizedHeaders) && empty($rows) ? 'none' : 'block' }}">
+                    <h4 class="mb-2">{{ trans('plugins/fob-product-size-guide::size-guide.table_builder.preview') }}</h4>
                     <div class="table-responsive">
                         <table class="table table-bordered table-hover" id="table-preview">
                             <thead>
                                 <tr id="preview-headers">
-                                    @foreach($headers as $header)
-                                        <th>{{ $header }}</th>
+                                    @foreach($normalizedHeaders as $header)
+                                        <th>{{ $headerNameMap->get($header, $header) }}</th>
                                     @endforeach
                                 </tr>
                             </thead>
